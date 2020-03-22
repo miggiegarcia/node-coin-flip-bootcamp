@@ -1,0 +1,41 @@
+
+body{
+  background-color:black;
+}
+section{
+  text-align: center;
+}
+
+h1{
+  border: 2px  solid green;
+  color: pink;
+  font-size: 40px;
+  margin-left:30%;
+  margin-right:30%;
+}
+h2{
+   border: 2px  solid pink;
+   color: green;
+   margin-left:30%;
+   margin-right:30%;
+}
+h3{
+  border: 2px  solid green;
+  color: pink;
+  margin-left:35%;
+  margin-right:35%;
+}
+
+.coin{
+  color: white;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+}
+button{
+  background-color:green;
+  font-weight: bold;
+  font-size: 20px;
+}
