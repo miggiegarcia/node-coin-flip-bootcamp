@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello!</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <h1>
+       Heads or Tails?
+    </h1>
+
+    <button class="head" type="button" name="button">Heads</button>
+    <button class="tail" type="button" name="button">Tails</button>
+    <h2 class= "result">Choose Head or Tails!</h2>
+
+
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>
+  </body>
+</html>
+
+<!-- worked on project with house cass: juan,khorally, tamika, kevin, jerry, rodas,milan -->
+
+/* If you're feeling fancy you can add interactivity
+    to your site with Javascript */
+
+// prints "hi" in the browser's dev tools console
+console.log("hi");
+
+document.querySelector('.head').addEventListener('click', ifHeads)
+
+document.querySelector('.tail').addEventListener('click', ifTails)
+
+let heads = 0
+let tails = 0
+
+function ifHeads(){
+ if(Math.floor(Math.random()*2) == 0){
+  document.querySelector('.result').innerText = 'You win!'
+} else{
+  document.querySelector('.result').innerText = 'Oops you lose :('
+ }
+}
+
+function ifTails(){
+ if(Math.floor(Math.random()*2) == 1){
+  document.querySelector('.result').innerText = 'You Win :)'
+  } else {
+  document.querySelector('.result').innerText = 'Oops you lose :('
+  }
+}
+//<!-- worked on project with house cass: juan,khorally, tamika, kevin, jerry, rodas,milan -->
+
+const http = require('http');
+const fs = require('fs');
+http.createServer(function (req, res) {
+  fs.readFile('index.html', function(err, data) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(data);
+    res.end();
+  });
+}).listen(8000);
+
+
+// <!-- worked on project with house cass: juan,khorally, tamika, kevin, jerry, rodas,milan -->
+
+
+
+
+// const server = http.createServer(function(req, res) {
+//   const page = url.parse(req.url).pathname;
+//   const params = querystring.parse(url.parse(req.url).query);
+//   console.log(page);
+//   // the forward slash represents the main page's root
+//   if (page == '/') {
+//     fs.readFile('index.html', function(err, data) {
+//       res.writeHead(200, {'Content-Type': 'text/html'});
+//       res.write(data);
+//       res.end();
+//     });
+//   }
+//   // conditional logic leads to another page using node
+//   else if (page == '/otherpage') {
+//     fs.readFile('otherpage.html', function(err, data) {
+//       res.writeHead(200, {'Content-Type': 'text/html'});
+//       res.write(data);
+//       res.end();
+//     });
+//   }
+//   else if (page == '/otherotherpage') {
+//     fs.readFile('otherotherpage.html', function(err, data) {
+//       res.writeHead(200, {'Content-Type': 'text/html'});
+//       res.write(data);
+//       res.end();
+//     });
+//   }
+//   // everything below built an api
+//   else if (page == '/api') {
+//     if('student' in params){
+//       // query parameters on the url
+//       if(params['student']== 'leon'){
+//         res.writeHead(200, {'Content-Type': 'application/json'});
+//         const objToJson = {
+//           name: "leon",
+//           status: "Boss Man",
+//           currentOccupation: "Baller"
+//         }
+//         res.end(JSON.stringify(objToJson));
+//       }//student = leon
+//       else if(params['student'] != 'leon'){
+//         res.writeHead(200, {'Content-Type': 'application/json'});
+//         const objToJson = {
+//           name: "unknown",
+//           status: "unknown",
+//           currentOccupation: "unknown"
+//         }
+//         res.end(JSON.stringify(objToJson));
+//       }//student != leon
+//     }//student if
+//   }//else if
+//   else if (page == '/css/style.css'){
+//     fs.readFile('css/style.css', function(err, data) {
+//       res.write(data);
+//       res.end();
+//     });
+//   }else if (page == '/js/main.js'){
+//     fs.readFile('js/main.js', function(err, data) {
+//       res.writeHead(200, {'Content-Type': 'text/javascript'});
+//       res.write(data);
+//       res.end();
+//     });
+//   }else{
+//     figlet('404!!', function(err, data) {
+//       if (err) {
+//           console.log('Something went wrong...');
+//           console.dir(err);
+//           return;
+//       }
+//       res.write(data);
+//       res.end();
+//     });
+//   }
+// });
+
+// server.listen(8000);
+
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+/* <!-- worked on project with house cass: juan,khorally, tamika, kevin, jerry, rodas,milan --> */
